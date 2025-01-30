@@ -9,7 +9,7 @@ body {
   gap: 10px; 
   height: 100vh; 
   margin: 0;
-  background-color: #f2eeee;
+  background: linear-gradient(to right, #91c9c9, #d9e0e0, #a6e1e1 )
   
 }
   
@@ -17,7 +17,7 @@ body {
 header {
   grid-column: span 12;
   grid-row: span 1;
-  background-color: #05262f;
+  
   padding: 10px;
   display: flex;
   justify-content:center;
@@ -26,13 +26,12 @@ header {
 }
 
 h1.inline-text1 {
-  color: #52ab98;
+  color: #131414;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bolder;
-  font-size: 40px;
+  font-size: 30px;
   margin: 10px;
-  text-align: center;
   margin-bottom: 0;
 }
     
@@ -44,11 +43,14 @@ h1.inline-text1 {
 main {
   grid-column: span 8;
   grid-row: span 6;
-  background: #52ab98;
   padding: 20px;
   border-radius: 10px;
-  margin-left: 10px;
-
+  margin-left: 50px;
+  width: 85%;
+  background-color: #f6f9f8;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  
+  
 }
 
 #h2main {
@@ -81,12 +83,22 @@ main {
   color: #142c3f;
 }
 #tasknotes {
-  height: 450px;
-  width: 80%;
+  min-height: 150px;
+  max-height: 450px;
+  width: 90%;
   justify-content: center;
   margin-bottom: 40px;
-  resize: none;
+  resize: none; 
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
   
+}
+#tasknotes:focus {
+  border-color: #4a90e2;
+  box-shadow: 0px 0px 8px rgba(74, 144, 226, 0.5);
 }
 #tasknotes::before {
   z-index: 0;
@@ -97,11 +109,12 @@ main {
 aside {
   grid-column: span 4;
   grid-row: span 6;
-  background: #aad6e2;
+  background: #f6f9f8;
   padding: 10px;
   overflow: auto;
   border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 60px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .listh2 {
   text-align: center;
@@ -143,7 +156,7 @@ button:hover {
   background-color: #f0aa68;
 }
 .listframe{
-  background-color:antiquewhite;
+  
   border: #9a9a9a;
   border-radius: 10px;
 }
@@ -156,6 +169,7 @@ ul li {
   padding: 12px 8px 12px 50px;
   position: relative;
   cursor: pointer;
+  background-color: transparent;
 }
 
 ul li::before {
@@ -211,20 +225,10 @@ ul li button {
 }
 footer {
   grid-column: span 12; 
-  background: #13344d;
   color: #161515;
-  text-align: center;
   padding: 10px;
 }
 #footerD {
   display: flex;
   gap: 75%;
-}
-footer #name {
-  color: #52ab98;
-  text-align:left;
-  padding-left: 10px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bolder;
-  font-size: 20px;
 }
