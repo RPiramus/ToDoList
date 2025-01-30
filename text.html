@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Do List</title>
+</head>
+<body>
+  <header>
+    <h1 class="inline-text1">PERSONAL TO DO LIST!</h1>
+    <img id="noteimg" src="png/—Pngtree—blank paper note pad vector_4136899.png">
+  </header>
+
+  <main>
+    <div id="beforetask">
+      <h2 id="h2main">To open notes create task first!</h2>
+      <img id="imgmain" src="png/transparent_image.png">
+    </div>
+    <div id="taskdetail">
+      <h2 id="tasktitle">Click a task to edit notes!</h2>
+      <textarea id="tasknotes" placeholder="Write notes here"></textarea>
+    </div>
+
+  </main>
+
+  <aside>
+    <div class="listh2">
+      <h2>List To Do</h2>
+    </div>
+    <div class="inputNbutton">
+      <input type="text" id="maininputtask" placeholder="Add your text">
+      <button id="taskbutton" onclick="addtask()">ADD</button>
+    </div>
+    <div class="listframe">
+    <ul id="listcontainer">
+      </ul>
+    </div>
+    
+  </aside>
+
+  <footer>
+    <div id="footerD">
+      <p id="name">Created by: Ramses Piramus, 2025</p>
+    </div>
+  </footer>
+<script src="system.js"></script>
+</body>
+</html>

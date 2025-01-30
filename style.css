@@ -1,0 +1,230 @@
+* {
+  user-select: none;
+  outline: none;
+}
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); 
+  grid-template-rows: repeat(8, 1fr); 
+  gap: 10px; 
+  height: 100vh; 
+  margin: 0;
+  background-color: #f2eeee;
+  
+}
+  
+    
+header {
+  grid-column: span 12;
+  grid-row: span 1;
+  background-color: #05262f;
+  padding: 10px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+ 
+}
+
+h1.inline-text1 {
+  color: #52ab98;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 10px;
+  text-align: center;
+  margin-bottom: 0;
+}
+    
+#noteimg {
+  width: 5%;
+
+}
+  
+main {
+  grid-column: span 8;
+  grid-row: span 6;
+  background: #52ab98;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+
+}
+
+#h2main {
+  text-align: center;
+  font-size:250%;
+  font-family: 'Courier New', Courier, monospace;
+}
+#imgmain {
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+}
+#taskdetail {
+  background-color: transparent;
+  border-radius: 10px;
+  flex-direction: column;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transform: translateY(-20px); 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#taskdetail.show {
+  display: block; 
+  opacity: 1;
+  transform: translateY(0);
+}
+#tasktitle {
+  font-family: 'Courier New', Courier, monospace;
+  color: #142c3f;
+}
+#tasknotes {
+  height: 450px;
+  width: 80%;
+  justify-content: center;
+  margin-bottom: 40px;
+  resize: none;
+  
+}
+#tasknotes::before {
+  z-index: 0;
+}
+#tasknotes::after {
+  z-index: 5;
+}
+aside {
+  grid-column: span 4;
+  grid-row: span 6;
+  background: #aad6e2;
+  padding: 10px;
+  overflow: auto;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.listh2 {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #142c3f;
+  
+}
+.inputNbutton {
+  flex: 1;
+  margin-bottom: 20px;
+  
+}
+#maininputtask {
+  border: rgb(11, 11, 11);
+  border-radius: 10px;
+  width: 80%;
+  height: 30px;
+  background-color: #f2eeee;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  color: black;
+  
+}
+#taskbutton {
+  background-color: f2eeee;
+  border: rgb(213, 205, 205);
+  border-radius: 10px;
+  width: 14%;
+  height: 30px;
+  margin-left: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  color: black;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #f0aa68;
+}
+.listframe{
+  background-color:antiquewhite;
+  border: #9a9a9a;
+  border-radius: 10px;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  background-image: url('png/icons8-circle-50.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #915353;
+  border: #161515;
+  border-radius: 10px;
+  left: -15px;
+  width: 20px;
+  height: 20px;
+  
+}
+ul li.checked{
+  color: rgb(15, 15, 15);
+  text-decoration: line-through;
+  
+}
+ul li.checked::before {
+  background-image: url('png/icons8-circle-50.png');
+  background-color:darkgoldenrod
+}
+ul li span {
+  position:absolute;
+  right: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  width: 30px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+ul li button {
+  position:absolute;
+  right: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  width: 15%;
+  height: 40%;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  color: #151414;
+  font-size: 10px;
+  line-height: 10px;
+
+}
+footer {
+  grid-column: span 12; 
+  background: #13344d;
+  color: #161515;
+  text-align: center;
+  padding: 10px;
+}
+#footerD {
+  display: flex;
+  gap: 75%;
+}
+footer #name {
+  color: #52ab98;
+  text-align:left;
+  padding-left: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  font-size: 20px;
+}
