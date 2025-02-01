@@ -9,7 +9,7 @@ body {
   gap: 10px; 
   height: 100vh; 
   margin: 0;
-  background: linear-gradient(to right, #91c9c9, #d9e0e0, #a6e1e1 )
+  background: linear-gradient(to right, #bec1c1, #d9e0e0, #ecf7f7 )
   
 }
   
@@ -228,3 +228,4 @@ footer {
   display: flex;
   gap: 75%;
 }
+
